@@ -2,114 +2,117 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/survey.css"/>
+    <link rel="stylesheet" href="./style.css"/>
   </head>
   <body>
-    <h1 id="title">National Survey Form</h1>
-    <p id="description">Fill out this form and let us help you find your life identity</p>
-
-    <form id="survey-form">
-      <div>
-        <label id="name-label" for="name"><strong>Name:</strong>
-          <input id="name" name="name" type="text" placeholder="Enter your name" required/>
+    <div class="container">
+      <h1 id="title">National Survey Form</h1>
+      <p id="description">Fill out this form and let us help you find your life identity</p>
+  
+      <form id="survey-form">
+        <div>
+          <label id="name-label" for="name"><strong>Name:</strong>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required/>
+          </label>
+          <label id="email-label" for="email"><strong>Email:</strong>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required/>
+          </label>
+          <label id="number-label" for="number"><strong>Age:</strong>
+          <input id="number" name="age" type="number" min="15" max="55" placeholder="Age" required/>     
+          </label>
+        </div>
+  
+        <div>
+          <label class="current-role" for="dropdown"><strong>Which option best describes your current role?</strong>
+            <select id="dropdown" required>
+              <option value="">Select current role</option>
+              <option value="1">High School Student</option>
+              <option value="2">College Student</option>
+              <option value="3">University Student</option>
+              <option value="4">Full Time Learner</option>
+              <option value="5">Part Time Job and Learn Other Stuff</option>
+              <option value="6">Freelance Job</option>
+              <option value="7">Company Staff</option>
+              <option value="8">Own Business</option>
+              <option value="9">Other</option>
+            </select>
+          </label>
+        </div>
+  
+        <div>
+          <p><strong>Do you feel like you have found your life identity?</strong></p>
+            <label for="absolutely">
+              <input id="absolutely" type="radio" value="1" name="found-identity" checked />Absolutely
+            </label>
+            <label for="maybe">
+              <input id="maybe" type="radio" value="2" name="found-identity" />Maybe
+            </label>
+            <label for="not-sure">
+              <input id="not-sure" type="radio" value="3" name="found-identity" />Not sure
+            </label>
+        </div>
+  
+        <div>
+          <label class="personality-type" for="personality">
+            <strong>What type of personality do you have?</strong>
+            <select id="personality" required>
+          <option value="">Select an option</option>
+          <option value="introvert">Introvert</option>
+          <option value="extrovert">Extrovert</option>
+          <option value="both">Both</option>
+          <option value="other">Other</option>
+            </select>
+          </label>
+        </div>
+        
+        <div>   
+          <p class="interest-field">
+            <strong>What is your field of interest? (Check all that apply)</strong>
+          </p>
+            <label for="cs">
+              <input id="cs" type="checkbox" name="interest" value="cs"/> Computer Science
+            </label>
+            <label for="math">
+              <input id="math" type="checkbox" name="interest" value="math"/> Mathematics
+            </label>
+            <label for="sd">
+              <input id="sd" type="checkbox" name="interest" value="sd"/> Software Development
+            </label>
+            <label for="wd">
+              <input id="wd" type="checkbox" name="interest" value="wd"/> Web Development
+            </label>
+            <label for="phy">
+              <input id="phy" type="checkbox" name="interest" value="phy"/> Physics
+            </label>
+            <label for="engineer">
+              <input id="engineer" type="checkbox" name="interest" value="engineer"/> Engineering
+            </label>
+            <label for="eco">
+              <input id="eco" type="checkbox" name="interest" value="eco"/> Economics
+            </label>
+            <label for="art">
+              <input id="art" type="checkbox" name="interest" value="art"/> Art
+            </label>
+            <label for="che">
+              <input id="che" type="checkbox" name="interest" value="che"/> Chemistry
+            </label>
+            <label for="bio">
+              <input id="bio" type="checkbox" name="interest" value="bio"/> Biology
+            </label>
+            <label for="other">
+              <input id="other" type="checkbox" name="interest" value="other"/> Other Field
+            </label>
+        </div>
+  
+        <label class="comment" for="comment">
+          <strong>Do you have any specific requests or comments?</strong>
+          <textarea id="comment" name="comment" rows="7" cols="40" placeholder="Enter here..."></textarea>
         </label>
-        <label id="email-label" for="email"><strong>Email:</strong>
-          <input id="email" name="email" type="email" placeholder="Enter your email" required/>
-        </label>
-        <label id="number-label" for="number"><strong>Age:</strong>
-        <input id="number" name="age" type="number" min="15" max="55" placeholder="Age" required/>     
-        </label>
-      </div>
-
-      <div>
-        <label class="current-role" for="dropdown"><strong>Which option best describes your current role?</strong>
-          <select id="dropdown" required>
-            <option value="">Select current role</option>
-            <option value="1">High School Student</option>
-            <option value="2">College Student</option>
-            <option value="3">University Student</option>
-            <option value="4">Full Time Learner</option>
-            <option value="5">Part Time Job and Learn Other Stuff</option>
-            <option value="6">Freelance Job</option>
-            <option value="7">Company Staff</option>
-            <option value="8">Own Business</option>
-            <option value="9">Other</option>
-          <select>
-        </label>
-      </div>
-
-      <div>
-        <p><strong>Do you feel like you have found your life identity?</strong></p>
-          <label for="absolutely">
-            <input id="absolutely" type="radio" value="1" name="found-identity" checked />Absolutely
-          </label>
-          <label for="maybe">
-            <input id="maybe" type="radio" value="2" name="found-identity" />Maybe
-          </label>
-          <label for="not-sure">
-            <input id="not-sure" type="radio" value="3" name="found-identity" />Not sure
-          </label>
-      </div>
-
-      <div>
-        <label class="personality-type" for="personality">
-          <strong>What type of personality do you have?</strong>
-          <select id="personality" required>
-        <option value="">Select an option</option>
-        <option value="introvert">Introvert</option>
-        <option value="extrovert">Extrovert</option>
-        <option value="both">Both</option>
-        <option value="other">Other</option>
-          </select>
-        </label>
-      </div>
-      
-      <div>   
-        <p class="interest-field">
-          <strong>What is your field of interest? (Check all that apply)</strong>
-        </p>
-          <label for="cs">
-            <input id="cs" type="checkbox" name="interest" value="cs"/> Computer Science
-          </label>
-          <label for="math">
-            <input id="math" type="checkbox" name="interest" value="math"/> Mathematics
-          </label>
-          <label for="sd">
-            <input id="sd" type="checkbox" name="interest" value="sd"/> Software Development
-          </label>
-          <label for="wd">
-            <input id="wd" type="checkbox" name="interest" value="wd"/> Web Development
-          </label>
-          <label for="phy">
-            <input id="phy" type="checkbox" name="interest" value="phy"/> Physics
-          </label>
-          <label for="engineer">
-            <input id="engineer" type="checkbox" name="interest" value="engineer"/> Engineering
-          </label>
-          <label for="eco">
-            <input id="eco" type="checkbox" name="interest" value="eco"/> Economics
-          </label>
-          <label for="art">
-            <input id="art" type="checkbox" name="interest" value="art"/> Art
-          </label>
-          <label for="che">
-            <input id="che" type="checkbox" name="interest" value="che"/> Chemistry
-          </label>
-          <label for="bio">
-            <input id="bio" type="checkbox" name="interest" value="bio"/> Biology
-          </label>
-          <label for="other">
-            <input id="other" type="checkbox" name="interest" value="other"/> Other Field
-          </label>
-      </div>
-
-      <label class="comment" for="comment">
-        <strong>Do you have any specific requests or comments?</strong>
-        <textarea id="comment" name="comment" rows="7" cols="40" placeholder="Enter here..."></textarea>
-      </label>
-
-      <button id="submit">Submit</button>  
-    </form>
+  
+        <button id="submit">Submit</button>  
+      </form>
+    </div>
+   
   </body>
 </html>
 
