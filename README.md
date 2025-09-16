@@ -53,8 +53,10 @@ Open index.html in your browser to view the survey form.
 ```
 
 ## 📂 Project Structure
+```bash
 ├── index.html       # Main HTML page with form elements
 └── style.css        # Styling for layout, inputs, and responsiveness
+```
 
 ## 🌍 Live Demo
 [Try it here](https://survey-form-b8mp.onrender.com/)
